@@ -9,6 +9,7 @@ const Landing = () => {
         <img src={logo} alt="jobify" className="logo" />
       </nav>
       <div className="container page">
+        {/* info */}
         <div className="info">
           <h1>
             job <span>tracking</span> app
@@ -18,7 +19,9 @@ const Landing = () => {
             kombucha seitan austin pok pok selfies bushwick. Jean shorts
             bushwick vinyl street art umami.
           </p>
+          <button className="btn btn-hero">Login/Register</button>
         </div>
+        <img src={main} alt="job hunt" className="img main-img" />
       </div>
     </main>
   );
