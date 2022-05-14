@@ -3,7 +3,25 @@ import logo from "../assets/images/logo.svg";
 import main from "../assets/images/main.svg";
 
 const Landing = () => {
-  return <h4>Landing Page</h4>;
+  return (
+    <main>
+      <nav>
+        <img src={logo} alt="jobify" className="logo" />
+      </nav>
+      <div className="container page">
+        <div className="info">
+          <h1>
+            job <span>tracking</span> app
+          </h1>
+          <p>
+            I'm baby cold-pressed cray adaptogen, ramps wolf tattooed leggings
+            kombucha seitan austin pok pok selfies bushwick. Jean shorts
+            bushwick vinyl street art umami.
+          </p>
+        </div>
+      </div>
+    </main>
+  );
 };
 
 export default Landing;
