@@ -1,4 +1,4 @@
-# jobify-app
+# jobify
 
 #### Track Your Job Search
 
