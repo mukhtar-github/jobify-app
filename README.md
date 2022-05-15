@@ -173,16 +173,14 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 - Dashboard is our Home Page
 
 ```js
-
 <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<div>Dashboard</div>} />
-      <Route path="/register" element={<div>Register</div>} />
-      <Route path="/landing" element={<Landing />} />
-      <Route path="*" element={<h1>Error</h1>} />
-    </Routes>
+  <Routes>
+    <Route path="/" element={<div>Dashboard</div>} />
+    <Route path="/register" element={<div>Register</div>} />
+    <Route path="/landing" element={<Landing />} />
+    <Route path="*" element={<h1>Error</h1>} />
+  </Routes>
 </BrowserRouter>
-
 ```
 
 ```js
@@ -228,8 +226,8 @@ return (
   <Wrapper className="full-page">
     <div>
       <img src={img} alt="not found" />
-      <h3>text</h3>
-      <p>text</p>
+      <h3>Ohh! page not found</h3>
+      <p>We can't seem to find the page you're looking for</p>
       <Link to="/">back home</Link>
     </div>
   </Wrapper>
