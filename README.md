@@ -170,6 +170,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 - Connect to browser's URL with BrowserRouter
 - Routes instead of Switch
+- Dashboard is our Home Page
 
 ```js
 
