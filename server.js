@@ -18,8 +18,7 @@ const app = express();
 dotenv.config();
 
 app.use(express.json());
-console.log("hello");
-console.log("hello");
+
 app.get("/", (req, res) => {
   res.send("Welcome!");
 });
