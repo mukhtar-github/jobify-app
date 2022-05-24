@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import "express-async-errors";
+import cors from "cors";
 
 // db and authenticateUser
 import connectDB from "./db/connect.js";
@@ -16,6 +17,8 @@ import errorHandlerMiddleware from "./middleware/error-handler.js";
 const app = express();
 
 dotenv.config();
+
+app.use(cors());
 
 app.use(express.json());
 
