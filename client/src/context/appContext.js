@@ -38,6 +38,10 @@ const AppProvider = ({ children }) => {
     }, 3000);
   };
 
+  const registerUser = async (currentUser) => {
+    console.log(currentUser);
+  };
+
   return (
     <AppContext.Provider
       value={{
