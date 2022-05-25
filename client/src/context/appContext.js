@@ -47,6 +47,7 @@ const AppProvider = ({ children }) => {
       value={{
         ...state,
         displayAlert,
+        registerUser,
       }}
     >
       {children}
