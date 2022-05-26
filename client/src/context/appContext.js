@@ -17,6 +17,7 @@ const initialState = {
   user: null,
   token: null,
   userLocation: "",
+  jobLocation: "",
 };
 
 const AppContext = React.createContext();
