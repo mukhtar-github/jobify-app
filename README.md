@@ -1508,7 +1508,7 @@ App.js
       <SharedLayout />
     </ProtectedRoute>
   }
-/>
+>
 ```
 
 ```js
