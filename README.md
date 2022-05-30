@@ -1580,7 +1580,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <h4>navbar</h4>
-      <FaHome>
+      <FaHome />
     </Wrapper>
   )
 }
