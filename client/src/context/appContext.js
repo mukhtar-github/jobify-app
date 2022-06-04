@@ -159,6 +159,7 @@ const AppProvider = ({ children }) => {
         // loginUser,
         setupUser,
         logoutUser,
+        toggleSidebar,
       }}
     >
       {children}
