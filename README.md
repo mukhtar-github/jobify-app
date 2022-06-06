@@ -1572,21 +1572,20 @@ npm install react-icons
 ```
 
 ```js
-Navbar.js
+Navbar.js;
 
-import Wrapper from '../assets/wrappers/Navbar'
-import {FaHome} from 'react-icons/fa'
+import Wrapper from "../assets/wrappers/Navbar";
+import { FaHome } from "react-icons/fa";
 const Navbar = () => {
   return (
     <Wrapper>
       <h4>navbar</h4>
       <FaHome />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;
 ```
 
 #### Navbar Setup
@@ -1934,11 +1933,11 @@ export default NavLinks;
 ```
 
 ```js
-SmallSidebar.js
+SmallSidebar.js;
 
-import NavLinks from './NavLinks'
+import NavLinks from "./NavLinks";
 
-return <NavLinks toggleSidebar={toggleSidebar} />
+return <NavLinks toggleSidebar={toggleSidebar} />;
 ```
 
 #### Big Sidebar
@@ -1950,7 +1949,7 @@ import Logo from "../components/Logo";
 import Wrapper from "../assets/wrappers/BigSidebar";
 
 const BigSidebar = () => {
-  const { showSidebar } = useAppContext();
+  const { showSidebar, toggleSidebar } = useAppContext();
   return (
     <Wrapper>
       <div
@@ -1962,7 +1961,7 @@ const BigSidebar = () => {
           <header>
             <Logo />
           </header>
-          <NavLinks />
+          <NavLinks toggleSidebar={toggleSidebar} />
         </div>
       </div>
     </Wrapper>
