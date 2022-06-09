@@ -2057,7 +2057,7 @@ Token: {
 ```js
 auth.js;
 
-import { UnAuthenticatedError } from "../errors/index.js";
+import { UnauthenticatedError } from "../errors/index.js";
 
 const auth = async (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -2065,7 +2065,7 @@ const auth = async (req, res, next) => {
   if (!authHeader) {
     // why, well is it 400 or 404?
     // actually 401
-    throw new UnAuthenticatedError("Authentication Invalid");
+    throw new UnauthenticatedError("Authentication Invalid");
   }
 
   next();
