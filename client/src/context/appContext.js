@@ -43,7 +43,7 @@ const AppProvider = ({ children }) => {
   // request
   authFetch.interceptors.request.use(
     (config) => {
-      // config.headers.common["Authorization"] = `Bearer ${state.token}`;
+      config.headers.common["Authorization"] = `Bearer ${state.token}`;
       return config;
     },
     (error) => {
@@ -57,7 +57,7 @@ const AppProvider = ({ children }) => {
       return response;
     },
     (error) => {
-      console.log(error.response);
+      // console.log(error.response);
       if (error.response.status === 401) {
         logoutUser();
       }
