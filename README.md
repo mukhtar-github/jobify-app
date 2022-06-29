@@ -2503,7 +2503,7 @@ const initialState = {
   editJobId: "",
   position: "",
   company: "",
-  // jobLocation
+  jobLocation: userLocation || "",
   jobTypeOptions: ["full-time", "part-time", "remote", "internship"],
   jobType: "full-time",
   statusOptions: ["pending", "interview", "declined"],
