@@ -33,7 +33,52 @@ const AddJob = () => {
     console.log(`${name}:${value}`);
   };
 
-  return <h1>Add Job Page</h1>;
+  return (
+    <Wrapper>
+      <form className="form">
+        <h3>{isEditing ? "edit job" : "add job"} </h3>
+        {showAlert && <Alert />}
+
+        {/* position */}
+        <div className="form-center">
+          <FormRow
+            type="text"
+            name="position"
+            value={position}
+            handleChange={handleJobInput}
+          />
+          {/* company */}
+          <FormRow
+            type="text"
+            name="company"
+            value={company}
+            handleChange={handleJobInput}
+          />
+          {/* location */}
+          <FormRow
+            type="text"
+            labelText="location"
+            name="jobLocation"
+            value={jobLocation}
+            handleChange={handleJobInput}
+          />
+          {/* job type */}
+
+          {/* job status */}
+
+          <div className="btn-container">
+            <button
+              className="btn btn-block submit-btn"
+              type="submit"
+              onClick={handleSubmit}
+            >
+              submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </Wrapper>
+  );
 };
 
 export default AddJob;
