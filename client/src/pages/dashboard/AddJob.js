@@ -77,6 +77,9 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={jobTypeOptions}
           />
+
+          {/*btn container*/}
+
           <div className="btn-container">
             <button
               className="btn btn-block submit-btn"
