@@ -12,6 +12,7 @@ import {
   UPDATE_USER_BEGIN,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_ERROR,
+  HANDLE_CHANGE,
 } from "./actions";
 
 const token = localStorage.getItem("token");
