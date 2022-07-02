@@ -157,17 +157,23 @@ const AppProvider = ({ children }) => {
     clearAlert();
   };
 
+  const handleChange = ({ name, value }) => {
+    dispatch({
+      type: HANDLE_CHANGE,
+      payload: { name, value },
+    });
+  };
+
   return (
     <AppContext.Provider
       value={{
         ...state,
         displayAlert,
-        // registerUser,
-        // loginUser,
         setupUser,
         logoutUser,
         toggleSidebar,
         updateUser,
+        handleChange,
       }}
     >
       {children}
