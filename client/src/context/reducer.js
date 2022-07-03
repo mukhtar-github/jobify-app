@@ -103,6 +103,19 @@ const reducer = (state, action) => {
     return { ...state, [action.payload.name]: action.payload.value };
   }
 
+  if (action.type === CLEAR_VALUES) {
+    const initialState = {
+      isEditing: false,
+      editJobId: "",
+      position: "",
+      company: "",
+      jobLocation: state.userLocation,
+      jobType: "full-time",
+      status: "pending",
+    };
+    return { ...state, ...initialState };
+  }
+
   throw new Error(`no such action :${action.type}`);
 };
 

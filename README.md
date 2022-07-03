@@ -2350,32 +2350,32 @@ const updateUser = async (currentUser) => {
 ```
 
 ```js
-reducer.js
+reducer.js;
 if (action.type === UPDATE_USER_BEGIN) {
-  return { ...state, isLoading: true }
+  return { ...state, isLoading: true };
 }
 
 if (action.type === UPDATE_USER_SUCCESS) {
   return {
     ...state,
     isLoading: false,
-    token:action.payload.token,
+    token: action.payload.token,
     user: action.payload.user,
     userLocation: action.payload.location,
     jobLocation: action.payload.location,
     showAlert: true,
-    alertType: 'success',
-    alertText: 'User Profile Updated!',
-  }
+    alertType: "success",
+    alertText: "User Profile Updated!",
+  };
 }
 if (action.type === UPDATE_USER_ERROR) {
   return {
     ...state,
     isLoading: false,
     showAlert: true,
-    alertType: 'danger',
+    alertType: "danger",
     alertText: action.payload.msg,
-  }
+  };
 }
 ```
 
@@ -2770,7 +2770,6 @@ const { clearValues } = useAppContext();
 return (
   <div className="btn-container">
     {/* submit button */}
-
     <button
       className="btn btn-block clear-btn"
       onClick={(e) => {
