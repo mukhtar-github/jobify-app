@@ -5,6 +5,7 @@ import Wrapper from "../../assets/wrappers/DashboardFormPage";
 
 const AddJob = () => {
   const {
+    isLoading,
     isEditing,
     showAlert,
     displayAlert,
@@ -86,6 +87,7 @@ const AddJob = () => {
               className="btn btn-block submit-btn"
               type="submit"
               onClick={handleSubmit}
+              disabled={isLoading}
             >
               submit
             </button>
