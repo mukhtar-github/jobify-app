@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, useEffect } from "react";
+import React, { useReducer, useContext } from "react";
 import reducer from "./reducer";
 import axios from "axios";
 import {
@@ -222,14 +222,10 @@ const AppProvider = ({ children }) => {
       });
     } catch (error) {
       console.log(error.response);
-      logoutUser();
+      // logoutUser();
     }
     clearAlert();
   };
-
-  useEffect(() => {
-    getJobs();
-  }, []);
 
   return (
     <AppContext.Provider
