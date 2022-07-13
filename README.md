@@ -2982,6 +2982,9 @@ const AllJobs = () => {
 export default AllJobs;
 ```
 
+- create in components folder
+- Loading export
+
 ```js
 JobsContainer.js;
 import { useAppContext } from "../context/appContext";
