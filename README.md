@@ -2986,6 +2986,12 @@ export default AllJobs;
 - Loading export
 
 ```js
+const Loading = ({ center }) => {
+  return <div className={center ? "loading loading-center" : "loading"}></div>;
+};
+```
+
+```js
 JobsContainer.js;
 import { useAppContext } from "../context/appContext";
 import { useEffect } from "react";
