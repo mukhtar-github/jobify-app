@@ -3088,7 +3088,7 @@ const setEditJob = (id) => {
   console.log(`set edit job : ${id}`)
 }
 const deleteJob = (id) =>{
-  console.log(`delete : ${id}`)
+  console.log(`delete job : ${id}`)
 }
 value={{setEditJob,deleteJob}}
 ```
