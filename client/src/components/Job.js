@@ -28,6 +28,27 @@ const Job = ({
           <p>{company}</p>
         </div>
       </header>
+      <div className="content">
+        {/* content center later */}
+        <footer>
+          <div className="actions">
+            <Link
+              to="/add-job"
+              onClick={() => setEditJob(_id)}
+              className="btn edit-btn"
+            >
+              Edit
+            </Link>
+            <button
+              type="button"
+              className="btn delete-btn"
+              onClick={() => deleteJob(_id)}
+            >
+              Delete
+            </button>
+          </div>
+        </footer>
+      </div>
     </Wrapper>
   );
 };
