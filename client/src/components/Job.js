@@ -6,7 +6,15 @@ import { useAppContext } from "../context/appContext";
 import Wrapper from "../assets/wrappers/Job";
 import JobInfo from "./JobInfo";
 
-const Job = ({ company, createdAt }) => {
+const Job = ({
+  _id,
+  position,
+  company,
+  jobLocation,
+  jobType,
+  createdAt,
+  status,
+}) => {
   let date = moment(createdAt);
   date = date.format("MMM Do, YYYY");
   return (
