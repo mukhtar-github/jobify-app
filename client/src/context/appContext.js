@@ -230,7 +230,6 @@ const AppProvider = ({ children }) => {
 
   const setEditJob = (id) => {
     dispatch({ type: SET_EDIT_JOB, payload: { id } });
-    console.log(`set edit job : ${id}`);
   };
 
   const editJob = () => {
