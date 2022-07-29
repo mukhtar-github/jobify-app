@@ -1,6 +1,7 @@
 import Job from "../models/Job.js";
 import { StatusCodes } from "http-status-codes";
 import { BadRequestError, NotFoundError } from "../errors/index.js";
+import checkPermissions from "../utils/checkPermissions.js";
 
 const createJob = async (req, res) => {
   const { position, company } = req.body;
@@ -45,6 +46,8 @@ const updateJob = async (req, res) => {
   // check permissions
   console.log(typeof req.user.userId);
   console.log(typeof job.createdBy);
+
+  checkPermissions(req.user, job.createdBy);
 
   const updatedJob = await Job.findOneAndUpdate({ _id: jobId }, req.body, {
     new: true,
