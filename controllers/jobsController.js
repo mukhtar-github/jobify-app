@@ -43,6 +43,8 @@ const updateJob = async (req, res) => {
   }
 
   // check permissions
+  console.log(typeof req.user.userId);
+  console.log(typeof job.createdBy);
 
   const updatedJob = await Job.findOneAndUpdate({ _id: jobId }, req.body, {
     new: true,
