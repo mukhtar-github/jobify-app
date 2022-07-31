@@ -269,7 +269,7 @@ const AppProvider = ({ children }) => {
       getJobs();
     } catch (error) {
       console.log(error.response);
-      //logoutUser();
+      // logoutUser();
     }
   };
 
