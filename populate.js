@@ -12,7 +12,7 @@ const start = async () => {
     await Job.deleteMany();
 
     const jsonProducts = JSON.parse(
-      await readFile(new URL("./mock-data.json", import.meta.url))
+      await readFile(new URL("./job-mock-data.json", import.meta.url))
     );
     await Job.create(jsonProducts);
     console.log("Success!!!!");
