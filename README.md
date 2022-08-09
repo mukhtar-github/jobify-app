@@ -3585,7 +3585,9 @@ const showStats = async (req, res) => {
     interview: stats.interview || 0,
     declined: stats.declined || 0,
   };
+
   let monthlyApplications = [];
+
   res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications });
 };
 ```
