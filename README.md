@@ -3689,7 +3689,7 @@ export default Stats;
 StatsContainer.js;
 
 import { useAppContext } from "../context/appContext";
-import StatItem from "./StatItem";
+import StatsItem from "./StatsItem";
 import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from "react-icons/fa";
 import Wrapper from "../assets/wrappers/StatsContainer";
 const StatsContainer = () => {
@@ -3721,7 +3721,7 @@ const StatsContainer = () => {
   return (
     <Wrapper>
       {defaultStats.map((item, index) => {
-        return <StatItem key={index} {...item} />;
+        return <StatsItem key={index} {...item} />;
       })}
     </Wrapper>
   );
