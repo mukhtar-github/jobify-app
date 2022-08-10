@@ -3737,7 +3737,7 @@ StatItem.js;
 
 import Wrapper from "../assets/wrappers/StatItem";
 
-function StatItem({ count, title, icon, color, bcg }) {
+function StatsItem({ count, title, icon, color, bcg }) {
   return (
     <Wrapper color={color} bcg={bcg}>
       <header>
@@ -3749,7 +3749,7 @@ function StatItem({ count, title, icon, color, bcg }) {
   );
 }
 
-export default StatItem;
+export default StatsItem;
 ```
 
 #### Aggregate Jobs Based on Year and Month
