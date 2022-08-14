@@ -27,6 +27,13 @@ const getAllJobs = async (req, res) => {
   };
 
   // add stuff based on condition
+  if (status !== "all") {
+    queryObject.status = status;
+  }
+
+  if (jobType !== "all") {
+    queryObject.jobType = jobType;
+  }
 
   // NO AWAIT
   let result = Job.find(queryObject);
