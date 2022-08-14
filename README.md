@@ -4187,7 +4187,6 @@ const SearchContainer = () => {
             list={["all", ...statusOptions]}
           ></FormRowSelect>
           {/* search by type */}
-
           <FormRowSelect
             labelText="job type"
             name="searchType"
@@ -4196,7 +4195,6 @@ const SearchContainer = () => {
             list={["all", ...jobTypeOptions]}
           ></FormRowSelect>
           {/* sort */}
-
           <FormRowSelect
             name="sort"
             value={sort}
