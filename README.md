@@ -4029,7 +4029,7 @@ const getAllJobs = async (req, res) => {
   // NO AWAIT
   let result = Job.find(queryObject);
 
-  // chain sort conditions
+  // chain sort conditions - Mongoose Sort
   if (sort === "latest") {
     result = result.sort("-createdAt");
   }
