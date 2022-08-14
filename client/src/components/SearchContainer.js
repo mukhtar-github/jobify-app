@@ -21,6 +21,11 @@ const SearchContainer = () => {
     handleChange({ name: e.target.name, value: e.target.value });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    clearFilters();
+  };
+
   return (
     <Wrapper>
       <form className="form">
@@ -59,7 +64,7 @@ const SearchContainer = () => {
           <button
             className="btn btn-block btn-danger"
             disabled={isLoading}
-            onClick={clearFilters}
+            onClick={handleSubmit}
           >
             clear filters
           </button>
