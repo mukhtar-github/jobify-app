@@ -3930,6 +3930,8 @@ const getAllJobs = async (req, res) => {
     createdBy: req.user.userId,
   };
 
+  // add stuff based on condition
+
   // NO AWAIT
   let result = Job.find(queryObject);
 
