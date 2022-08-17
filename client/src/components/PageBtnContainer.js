@@ -10,7 +10,6 @@ const PageButtonContainer = () => {
     return index + 1;
   });
 
-  PageBtnContainer.js;
   const prevPage = () => {
     let newPage = page - 1;
     if (newPage < 1) {
