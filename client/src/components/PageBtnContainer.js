@@ -10,11 +10,24 @@ const PageButtonContainer = () => {
     return index + 1;
   });
 
+  PageBtnContainer.js;
   const prevPage = () => {
-    console.log("prev page");
+    let newPage = page - 1;
+    if (newPage < 1) {
+      // newPage = 1
+      // alternative
+      newPage = numOfPages;
+    }
+    changePage(newPage);
   };
   const nextPage = () => {
-    console.log("next page");
+    let newPage = page + 1;
+    if (newPage > numOfPages) {
+      // newPage = numOfPages
+      // alternative
+      newPage = 1;
+    }
+    changePage(newPage);
   };
 
   return (
