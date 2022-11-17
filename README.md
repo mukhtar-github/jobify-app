@@ -4781,6 +4781,9 @@ const SearchContainer = () => {
 export default SearchContainer;
 ```
 
+"password":"umar12",
+"email":"rufaidah@gmail.com"
+
 #### Test User - Initial Setup
 
 - create new user (test user)
