@@ -28,6 +28,13 @@ const SearchContainer = () => {
     clearFilters();
   };
 
+  const debounce = () => {
+    console.log("debounce");
+    return (e) => {
+      setLocalSearch(e.target.value);
+    };
+  };
+
   return (
     <Wrapper>
       <form className="form">
@@ -38,7 +45,7 @@ const SearchContainer = () => {
             type="text"
             name="search"
             value={localSearch}
-            handleChange={(e) => setLocalSearch(e.target.value)}
+            handleChange={debounce()}
           ></FormRow>
           {/* search by status */}
           <FormRowSelect
