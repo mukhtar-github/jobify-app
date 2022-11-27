@@ -114,17 +114,17 @@ const AppProvider = ({ children }) => {
     }, 3000);
   };
 
-  const addUserToLocalStorage = ({ user, token, location }) => {
-    localStorage.setItem("user", JSON.stringify(user));
-    localStorage.setItem("token", token);
-    localStorage.setItem("location", location);
-  };
+  // const addUserToLocalStorage = ({ user, token, location }) => {
+  //   localStorage.setItem("user", JSON.stringify(user));
+  //   localStorage.setItem("token", token);
+  //   localStorage.setItem("location", location);
+  // };
 
-  const removeUserFromLocalStorage = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    localStorage.removeItem("location");
-  };
+  // const removeUserFromLocalStorage = () => {
+  //   localStorage.removeItem("token");
+  //   localStorage.removeItem("user");
+  //   localStorage.removeItem("location");
+  // };
 
   const setupUser = async ({ currentUser, endPoint, alertText }) => {
     dispatch({ type: SETUP_USER_BEGIN });
