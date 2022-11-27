@@ -134,12 +134,12 @@ const AppProvider = ({ children }) => {
         currentUser
       );
 
-      const { user, token, location } = data;
+      const { user, location } = data;
       dispatch({
         type: SETUP_USER_SUCCESS,
-        payload: { user, token, location, alertText },
+        payload: { user, location, alertText },
       });
-      addUserToLocalStorage({ user, token, location });
+      //addUserToLocalStorage({ user, token, location });
     } catch (error) {
       dispatch({
         type: SETUP_USER_ERROR,
@@ -155,7 +155,7 @@ const AppProvider = ({ children }) => {
 
   const logoutUser = () => {
     dispatch({ type: LOGOUT_USER });
-    removeUserFromLocalStorage();
+    //removeUserFromLocalStorage();
   };
 
   const updateUser = async (currentUser) => {
@@ -163,14 +163,14 @@ const AppProvider = ({ children }) => {
     try {
       const { data } = await authFetch.patch("/auth/updateUser", currentUser);
 
-      const { user, location, token } = data;
+      const { user, location } = data;
 
       dispatch({
         type: UPDATE_USER_SUCCESS,
-        payload: { user, location, token },
+        payload: { user, location },
       });
 
-      addUserToLocalStorage({ user, location, token });
+      //addUserToLocalStorage({ user, location, token });
     } catch (error) {
       if (error.response.status !== 401) {
         dispatch({
