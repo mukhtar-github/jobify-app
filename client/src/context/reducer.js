@@ -253,13 +253,6 @@ const reducer = (state, action) => {
     };
   }
 
-  if (action.type === LOGOUT_USER) {
-    return {
-      ...initialState,
-      userLoading: false,
-    };
-  }
-
   throw new Error(`no such action :${action.type}`);
 };
 
