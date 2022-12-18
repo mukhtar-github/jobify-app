@@ -5147,6 +5147,17 @@ const getCurrentUser = async () => {
 useEffect(() => {
   getCurrentUser();
 }, []);
+
+return (
+  <AppContext.Provider
+    value={{
+      ...state,
+      getCurrentUser,
+    }}
+  >
+    {children}
+  </AppContext.Provider>
+);
 ```
 
 reducer.js
