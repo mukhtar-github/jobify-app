@@ -242,6 +242,26 @@ const reducer = (state, action) => {
     return { ...state, page: action.payload.page };
   }
 
+  if (action.type === GET_CURRENT_USER_BEGIN) {
+    return { ...state, userLoading: true, showAlert: false };
+  }
+  if (action.type === GET_CURRENT_USER_SUCCESS) {
+    return {
+      ...state,
+      userLoading: false,
+      user: action.payload.user,
+      userLocation: action.payload.location,
+      jobLocation: action.payload.location,
+    };
+  }
+
+  if (action.type === LOGOUT_USER) {
+    return {
+      ...initialState,
+      userLoading: false,
+    };
+  }
+
   throw new Error(`no such action :${action.type}`);
 };
 
