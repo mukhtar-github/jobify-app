@@ -5251,7 +5251,7 @@ import {
 
 router.route("/register").post(apiLimiter, register);
 router.route("/login").post(apiLimiter, login);
-router.get("/logout", logout);
+router.route("/logout").get(logout);
 // rest of the code ....
 ```
 
