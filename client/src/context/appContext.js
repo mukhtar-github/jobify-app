@@ -357,7 +357,7 @@ const AppProvider = ({ children }) => {
         showStats,
         clearFilters,
         changePage,
-        getCurrentUser,
+        //getCurrentUser,
       }}
     >
       {children}
