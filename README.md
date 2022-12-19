@@ -5224,12 +5224,6 @@ const Landing = () => {
 export default Landing;
 ```
 
-#### Test Expiration
-
-```js
-expires: new Date(Date.now() + 5000),
-```
-
 #### Logout Route
 
 controllers/authController
