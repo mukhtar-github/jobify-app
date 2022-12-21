@@ -5266,6 +5266,10 @@ const logoutUser = async () => {
 };
 ```
 
+#### Start Local Host
+
+- npm start
+
 #### Prepare for Deployment
 
 - in client remove build and node_modules
@@ -5282,6 +5286,8 @@ package.json
 
 
 ```
+
+#### Start Production Server
 
 - node server
 - APP NEEDS TO WORK LOCALLY !!!

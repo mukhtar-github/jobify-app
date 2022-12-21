@@ -33,10 +33,6 @@ import {
   GET_CURRENT_USER_SUCCESS,
 } from "./actions";
 
-// const token = localStorage.getItem("token");
-// const user = localStorage.getItem("user");
-// const userLocation = localStorage.getItem("location");
-
 const initialState = {
   userLoading: true,
   isLoading: false,
@@ -77,17 +73,6 @@ const AppProvider = ({ children }) => {
   const authFetch = axios.create({
     baseURL: "/api/v1",
   });
-
-  // // request
-  // authFetch.interceptors.request.use(
-  //   (config) => {
-  //     config.headers.common["Authorization"] = `Bearer ${state.token}`;
-  //     return config;
-  //   },
-  //   (error) => {
-  //     return Promise.reject(error);
-  //   }
-  // );
 
   // response
   authFetch.interceptors.response.use(
@@ -130,7 +115,6 @@ const AppProvider = ({ children }) => {
         type: SETUP_USER_SUCCESS,
         payload: { user, location, alertText },
       });
-      //addUserToLocalStorage({ user, token, location });
     } catch (error) {
       dispatch({
         type: SETUP_USER_ERROR,
@@ -153,15 +137,11 @@ const AppProvider = ({ children }) => {
     dispatch({ type: UPDATE_USER_BEGIN });
     try {
       const { data } = await authFetch.patch("/auth/updateUser", currentUser);
-
       const { user, location } = data;
-
       dispatch({
         type: UPDATE_USER_SUCCESS,
         payload: { user, location },
       });
-
-      //addUserToLocalStorage({ user, location, token });
     } catch (error) {
       if (error.response.status !== 401) {
         dispatch({
@@ -188,7 +168,6 @@ const AppProvider = ({ children }) => {
     dispatch({ type: CREATE_JOB_BEGIN });
     try {
       const { position, company, jobLocation, jobType, status } = state;
-
       await authFetch.post("/jobs", {
         company,
         position,
@@ -199,7 +178,6 @@ const AppProvider = ({ children }) => {
       dispatch({
         type: CREATE_JOB_SUCCESS,
       });
-      // call function instead clearValues()
       dispatch({ type: CLEAR_VALUES });
     } catch (error) {
       if (error.response.status === 401) return;
@@ -295,7 +273,6 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       logoutUser();
     }
-
     clearAlert();
   };
 
@@ -312,7 +289,6 @@ const AppProvider = ({ children }) => {
     try {
       const { data } = await authFetch("/auth/getCurrentUser");
       const { user, location } = data;
-
       dispatch({
         type: GET_CURRENT_USER_SUCCESS,
         payload: { user, location },
@@ -345,7 +321,6 @@ const AppProvider = ({ children }) => {
         showStats,
         clearFilters,
         changePage,
-        //getCurrentUser,
       }}
     >
       {children}
